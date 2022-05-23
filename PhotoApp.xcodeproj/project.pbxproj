@@ -29,6 +29,7 @@
 		932B7529283B066200614F41 /* SignupPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932B7528283B066200614F41 /* SignupPresenterTests.swift */; };
 		932B752B283B067100614F41 /* SignupWebServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932B752A283B067100614F41 /* SignupWebServiceTests.swift */; };
 		932B752D283B068100614F41 /* SignupFormModelValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932B752C283B068100614F41 /* SignupFormModelValidatorTests.swift */; };
+		932B752F283B08EC00614F41 /* SignupFlowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932B752E283B08EC00614F41 /* SignupFlowUITests.swift */; };
 		93F5FBD6281C382E0051E1AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F5FBD5281C382E0051E1AD /* AppDelegate.swift */; };
 		93F5FBD8281C382E0051E1AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F5FBD7281C382E0051E1AD /* SceneDelegate.swift */; };
 		93F5FBDD281C382E0051E1AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93F5FBDB281C382E0051E1AD /* Main.storyboard */; };
@@ -76,6 +77,7 @@
 		932B7528283B066200614F41 /* SignupPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPresenterTests.swift; sourceTree = "<group>"; };
 		932B752A283B067100614F41 /* SignupWebServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupWebServiceTests.swift; sourceTree = "<group>"; };
 		932B752C283B068100614F41 /* SignupFormModelValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupFormModelValidatorTests.swift; sourceTree = "<group>"; };
+		932B752E283B08EC00614F41 /* SignupFlowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupFlowUITests.swift; sourceTree = "<group>"; };
 		93F5FBD2281C382E0051E1AD /* PhotoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93F5FBD5281C382E0051E1AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93F5FBD7281C382E0051E1AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 		93F5FBF5281C38310051E1AD /* PhotoAppUITests */ = {
 			isa = PBXGroup;
 			children = (
+				932B752E283B08EC00614F41 /* SignupFlowUITests.swift */,
 			);
 			path = PhotoAppUITests;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 					};
 					93F5FBF1281C38310051E1AD = {
 						CreatedOnToolsVersion = 13.3.1;
+						LastSwiftMigration = 1330;
 						TestTargetID = 93F5FBD1281C382E0051E1AD;
 					};
 				};
@@ -447,6 +451,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				932B752F283B08EC00614F41 /* SignupFlowUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -712,14 +717,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P65LS7STQH;
 				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.srsj.PhotoAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = PhotoApp;
@@ -730,10 +742,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P65LS7STQH;
 				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.srsj.PhotoAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
